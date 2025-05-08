@@ -7,6 +7,46 @@ from gtts import gTTS
 from PIL import Image
 import base64
 
+st.markdown(
+    """
+    <style>
+    /* Fondo general rojo */
+    .stApp {
+        background-color: #ff4d4d; /* Rojo claro */
+        color: #ffffff; /* Letra blanca para contraste */
+    }
+
+    /* Colores de los encabezados */
+    h1, h2, h3 {
+        color: #ffffff;
+    }
+
+    /* Fondo y color de los inputs */
+    .stTextInput > div > div > input,
+    .stTextArea > div > textarea,
+    .stSelectbox > div,
+    .stButton > button {
+        background-color: #ffffff;
+        color: #000000;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+    }
+
+    /* Color del botón al pasar el cursor */
+    .stButton > button:hover {
+        background-color: #ff9999;
+        color: #000;
+    }
+
+    /* Color del texto normal */
+    .stMarkdown p {
+        color: #ffffff;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.title("Conversión de Texto a Audio")
 image = Image.open('51b941182998e8d3428c506e36b8ce07.jpg')
 st.image(image, width=350)
